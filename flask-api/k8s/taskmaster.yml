@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskmaster
+  labels:
+    app: taskmaster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskmaster
+  template:
+    metadata:
+      labels:
+        app: taskmaster
+    spec:
+      containers:
+        - name: taskmaster
+          image: trainwithshubham/taskmaster-python:latest
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always
