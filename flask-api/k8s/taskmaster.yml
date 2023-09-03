@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: taskmaster
-          image: trainwithshubham/taskmaster-python:latest
+          image: kunalgohrani/microservicespythonapp:latest
           ports:
             - containerPort: 5000
           imagePullPolicy: Always

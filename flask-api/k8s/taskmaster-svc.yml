@@ -6,7 +6,8 @@ spec:
   selector:
     app: taskmaster
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 5000
       nodePort: 30007
   type: NodePort
